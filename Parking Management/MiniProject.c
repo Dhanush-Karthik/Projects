@@ -42,7 +42,7 @@ void park(struct parking pk[]){
         }
         if(temp->data == 0){
             int cho;
-            printf("\n\nTHER IS AN EMPTY SLOT IN ROW: %d COLUMN: %d.\nDO YOU WANT TO PARK?(YES(1)/NO(0)):",row+1,column+1);
+            printf("\n\nTHERE IS AN EMPTY SLOT IN ROW: %d COLUMN: %d.\nDO YOU WANT TO PARK?(YES(1)/NO(0)):",row+1,column+1);
             scanf("%d",&cho);
             if(cho == 1){
                 system("clear");
