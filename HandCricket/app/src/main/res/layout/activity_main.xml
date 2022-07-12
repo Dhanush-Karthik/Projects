@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="420dp"
+        android:layout_height="1300dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="260dp"
+        android:onClick="click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handBoard"
+        app:srcCompat="@drawable/play_button" />
+
+    <ImageView
+        android:id="@+id/gameLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameName"
+        app:srcCompat="@drawable/game_logo" />
+
+    <TextView
+        android:id="@+id/gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="133dp"
+        android:layout_marginBottom="163dp"
+        android:text="Welcome to hand cricket"
+        android:textColor="#DF2E2E"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/tailsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/handBoard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="31dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hand_board" />
+
+    <ImageView
+        android:id="@+id/numberBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handBoard"
+        app:srcCompat="@drawable/numbers_board" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="49dp"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout2"
+        app:rowCount="2">
+
+        <ImageView
+            android:id="@+id/buttonOne"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:alpha="0"
+            android:onClick="onClick"
+            android:tag="1"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/number_one" />
+
+        <ImageView
+            android:id="@+id/buttonTwo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:alpha="0"
+            android:onClick="onClick"
+            android:tag="2"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/number_two" />
+
+        <ImageView
+            android:id="@+id/buttonThree"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:alpha="0"
+            android:onClick="onClick"
+            android:tag="3"
+            app:layout_column="2"
+            app:layout_row="0"
+            app:srcCompat="@drawable/number_three" />
+
+        <ImageView
+            android:id="@+id/buttonFour"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:alpha="0"
+            android:onClick="onClick"
+            android:tag="4"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/number_four" />
+
+        <ImageView
+            android:id="@+id/buttonFive"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:alpha="0"
+            android:onClick="onClick"
+            android:tag="5"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/number_five" />
+
+        <ImageView
+            android:id="@+id/buttonSix"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:alpha="0"
+            android:onClick="onClick"
+            android:tag="6"
+            app:layout_column="2"
+            app:layout_row="1"
+            app:srcCompat="@drawable/number_six" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="59dp"
+        app:columnCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="1">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="70dp"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="70dp"
+            app:layout_column="1"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/tossId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="61dp"
+        android:alpha="0"
+        android:text="IT'S TOSS TIME"
+        android:textColor="#DF2E2E"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gridLayout2"
+        app:layout_constraintStart_toStartOf="@+id/gridLayout2" />
+
+    <ImageView
+        android:id="@+id/headsButton"
+        android:layout_width="205dp"
+        android:layout_height="93dp"
+        android:alpha="0"
+        android:onClick="heads"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/handBoard"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/heads_button" />
+
+    <ImageView
+        android:id="@+id/tailsButton"
+        android:layout_width="211dp"
+        android:layout_height="93dp"
+        android:layout_marginBottom="320dp"
+        android:alpha="0"
+        android:onClick="tails"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/batButton"
+        app:srcCompat="@drawable/tails_button" />
+
+    <TextView
+        android:id="@+id/tossResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="174dp"
+        android:text="Yow won the Toss"
+        android:textColor="#DF2E2E"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tailsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/batButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="5dp"
+        android:onClick="firstBat"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/bowlButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bowlButton"
+        app:srcCompat="@drawable/bat_button" />
+
+    <ImageView
+        android:id="@+id/bowlButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:onClick="firstBowl"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/batButton"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout2"
+        app:srcCompat="@drawable/bowl_button" />
+
+    <TextView
+        android:id="@+id/displayView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textColor="#F60D0D"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/batButton"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/batButton"
+        app:layout_constraintTop_toTopOf="@+id/headsButton" />
+
+    <TextView
+        android:id="@+id/youView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:alpha="0"
+        android:text="You:"
+        android:textColor="#DF2E2E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
+        app:layout_constraintStart_toStartOf="@+id/handBoard" />
+
+    <TextView
+        android:id="@+id/oppoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="7dp"
+        android:alpha="0"
+        android:text=":Opponent"
+        android:textColor="#DF2E2E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Score: 100"
+        android:textColor="#297F87"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tossResult"
+        app:layout_constraintStart_toStartOf="@+id/gridLayout2" />
+
+    <TextView
+        android:id="@+id/targetView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="target:100"
+        android:textColor="#297F87"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tossResult"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/okayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:onClick="fadeIn"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/numberBoard"
+        app:layout_constraintEnd_toEndOf="@+id/batButton"
+        app:layout_constraintStart_toEndOf="@+id/batButton"
+        app:srcCompat="@drawable/okay_button" />
+
+    <ImageView
+        android:id="@+id/leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:alpha="0"
+        android:onClick="leave"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/bowlButton"
+        app:layout_constraintEnd_toEndOf="@+id/batButton"
+        app:layout_constraintStart_toEndOf="@+id/batButton"
+        app:srcCompat="@drawable/exit_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
